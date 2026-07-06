@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-hover: var(--c-surface-hover);
+  --color-border: var(--c-border);
+  --color-ink: var(--c-ink);
+  --color-ink-muted: var(--c-ink-muted);
+  --color-accent: var(--c-accent);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-circuit: var(--c-circuit);
+  --color-circuit-soft: var(--c-circuit-soft);
+
+  --animate-pulse-slow: pulse-slow 2.4s ease-in-out infinite;
+}
+
+:root {
+  --c-bg: #f7f5ef;
+  --c-surface: #ffffff;
+  --c-surface-hover: #f0ede2;
+  --c-border: #ddd7c7;
+  --c-ink: #191510;
+  --c-ink-muted: #6b6457;
+  --c-accent: #b45309;
+  --c-accent-soft: rgba(180, 83, 9, 0.1);
+  --c-circuit: #0f766e;
+  --c-circuit-soft: rgba(15, 118, 110, 0.12);
+
+  color-scheme: light;
+}
+
+.dark {
+  --c-bg: #0a0d13;
+  --c-surface: #10141c;
+  --c-surface-hover: #161b25;
+  --c-border: #232a37;
+  --c-ink: #e8ecf3;
+  --c-ink-muted: #8993a3;
+  --c-accent: #ffb454;
+  --c-accent-soft: rgba(255, 180, 84, 0.12);
+  --c-circuit: #5eead4;
+  --c-circuit-soft: rgba(94, 234, 212, 0.12);
+
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .bg-blueprint {
+    background-image:
+      radial-gradient(var(--color-border) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .corner-brackets {
+    position: relative;
+  }
+
+  .corner-brackets::before,
+  .corner-brackets::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    border-color: var(--color-circuit);
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  .corner-brackets::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+
+  .corner-brackets::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+
+  .corner-brackets:hover::before,
+  .corner-brackets:hover::after {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
