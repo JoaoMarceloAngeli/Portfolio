@@ -9,10 +9,8 @@ export function Projects() {
   return (
     <Section id="projetos" index="03" title={t.projects.title}>
       <div className="grid gap-6 sm:grid-cols-2">
-        {projects.map((project, i) => (
-          <div key={project.id} className={i === projects.length - 1 ? 'sm:col-span-2' : ''}>
-            <ProjectCard project={project} />
-          </div>
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </Section>

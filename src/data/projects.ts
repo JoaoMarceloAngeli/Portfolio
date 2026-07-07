@@ -17,5 +17,13 @@ export const projects: ProjectMeta[] = [
     id: 'app-casal',
     index: '03',
     stack: ['React', 'Vite', 'PWA', 'Supabase', 'Web Push (VAPID)'],
+    noteKind: 'private',
+  },
+  {
+    id: 'projetos-java-faculdade',
+    index: '04',
+    stack: ['Java', 'NetBeans'],
+    repoUrl: 'https://github.com/JoaoMarceloAngeli/Projetos-Java-faculdade',
+    noteKind: 'academic',
   },
 ]

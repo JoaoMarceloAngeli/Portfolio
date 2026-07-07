@@ -124,10 +124,18 @@ const pt: Translations = {
       'app-casal': {
         name: 'App para Casais',
         problem:
-          'Rotina corrida faz casais perderem o registro de lugares, filmes e datas importantes — e faltava um jeito rápido de lembrar remédio na hora certa ou mandar um "lembrei de você" sem abrir o WhatsApp.',
+          'A rotina corrida faz casais perderem o registro de lugares, filmes e datas importantes — e faltava um jeito rápido de lembrar o remédio na hora certa ou avisar "estou pensando em você" sem precisar abrir o WhatsApp.',
         solution:
           'PWA responsivo organizado em menus (lugares, comidas, filmes/séries, eventos e datas), com lembretes de remédio agendados por quem cadastra e notificações push instantâneas entre os dois celulares.',
         note: 'Repositório privado',
+      },
+      'projetos-java-faculdade': {
+        name: 'Exercícios de Java — Faculdade',
+        problem:
+          'Praticar programação orientada a objetos, herança e estruturas de dados (listas, pilhas, árvores) nas disciplinas de Java da faculdade, com exercícios avulsos de fixação.',
+        solution:
+          'Coleção de exercícios e miniprojetos em Java (NetBeans) — classes de formas geométricas, herança, pilhas e árvores binárias, coleções TreeSet/TreeMap, e pequenos sistemas de cadastro (funcionário, eleitor, aluno, conta poupança).',
+        note: 'Projeto de faculdade',
       },
     },
   },
@@ -237,6 +245,14 @@ const en: Translations = {
         solution:
           'Responsive PWA organized into menus (places, food, movies/shows, events and dates), with medication reminders scheduled by whoever adds them and instant push notifications between both phones.',
         note: 'Private repository',
+      },
+      'projetos-java-faculdade': {
+        name: 'Java Coursework — University Exercises',
+        problem:
+          'Practicing object-oriented programming, inheritance and data structures (lists, stacks, trees) for university Java courses, through standalone practice exercises.',
+        solution:
+          'Collection of Java exercises and mini-projects (NetBeans) — geometric shape classes, inheritance, stacks and binary trees, TreeSet/TreeMap collections, and small record-keeping exercises (employee, voter, student, savings account).',
+        note: 'College coursework',
       },
     },
   },

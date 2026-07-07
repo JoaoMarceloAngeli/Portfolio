@@ -1,19 +1,22 @@
-import { ArrowUpRight, Lock } from 'lucide-react'
+import { ArrowUpRight, GraduationCap, Lock } from 'lucide-react'
 import type { ProjectMeta } from '@/types'
 import { GithubIcon } from '@/components/ui/icons'
 import { useLanguage } from '@/i18n/useLanguage'
 
+const NOTE_ICONS = { private: Lock, academic: GraduationCap }
+
 export function ProjectCard({ project }: { project: ProjectMeta }) {
   const { t } = useLanguage()
   const content = t.projects.items[project.id]
+  const NoteIcon = project.noteKind ? NOTE_ICONS[project.noteKind] : null
 
   return (
     <article className="corner-brackets group flex flex-col gap-5 border border-border bg-surface p-6 transition-colors hover:bg-surface-hover sm:p-8">
       <div className="flex items-start justify-between gap-4">
         <span className="font-mono text-sm text-accent">{project.index}</span>
-        {content.note && (
+        {content.note && NoteIcon && (
           <span className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-ink-muted">
-            <Lock size={12} />
+            <NoteIcon size={12} />
             {content.note}
           </span>
         )}
