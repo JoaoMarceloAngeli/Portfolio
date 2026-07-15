@@ -33,7 +33,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a href="#top" className="font-mono text-sm font-medium text-ink">
-          jm<span className="text-accent">.</span>ab
+          João_Marcelo<span className="text-accent">.</span>Dev
         </a>
 
         <ul className="hidden items-center gap-7 font-mono text-xs uppercase tracking-wider text-ink-muted sm:flex">
