@@ -117,17 +117,17 @@ const pt: Translations = {
       'app-casal': {
         name: 'App para Casais',
         problem:
-          'A rotina corrida faz casais perderem o registro de lugares, filmes e datas importantes — e faltava um jeito rápido de lembrar o remédio na hora certa ou avisar "estou pensando em você" sem precisar abrir o WhatsApp.',
+          'A rotina corrida faz casais perderem o registro de lugares, filmes, fotos e datas importantes — e faltava um jeito rápido de lembrar o remédio na hora certa ou avisar "estou pensando em você" sem precisar abrir o WhatsApp.',
         solution:
-          'PWA responsivo organizado em menus (lugares, comidas, filmes/séries, eventos e datas), com lembretes de remédio agendados por quem cadastra e notificações push instantâneas entre os dois celulares.',
+          'PWA bilíngue (PT/EN) organizado em menus (lugares, comidas, filmes/séries, fotos, cartinhas, recados, sugestões, eventos e datas), com lembretes de remédio agendados por quem cadastra, notificações push instantâneas entre os dois celulares e um placar gamificado de "momentos espelhados" para os pings de "pensando em você" enviados em horários espelhados.',
         note: 'Repositório privado',
       },
       'projetos-java-faculdade': {
         name: 'Exercícios de Java — Faculdade',
         problem:
-          'Praticar programação orientada a objetos, herança e estruturas de dados (listas, pilhas, árvores) nas disciplinas de Java da faculdade, com exercícios avulsos de fixação.',
+          'Praticar programação orientada a objetos, herança, recursividade e estruturas de dados (listas, pilhas, árvores) nas disciplinas de Java da faculdade, com exercícios avulsos de fixação.',
         solution:
-          'Coleção de exercícios e miniprojetos em Java (NetBeans) — classes de formas geométricas, herança, pilhas e árvores binárias, coleções TreeSet/TreeMap, e pequenos sistemas de cadastro (funcionário, eleitor, aluno, conta poupança).',
+          'Coleção de exercícios e miniprojetos em Java (NetBeans) — classes de formas geométricas, herança, pilhas, árvores binárias e BST, recursividade, coleções TreeSet/TreeMap, sistemas de cadastro (funcionário, eleitor, aluno, conta poupança) e uma agenda de contatos completa com camadas MVC/DAO, persistência em banco de dados e geração de relatórios em PDF.',
         note: 'Projeto de faculdade',
       },
     },
@@ -227,17 +227,17 @@ const en: Translations = {
       'app-casal': {
         name: 'Couples App',
         problem:
-          'A busy routine makes couples lose track of places, movies and important dates — and there was no quick way to get a medication reminder on time or send a "thinking of you" ping without opening WhatsApp.',
+          'A busy routine makes couples lose track of places, movies, photos and important dates — and there was no quick way to get a medication reminder on time or send a "thinking of you" ping without opening WhatsApp.',
         solution:
-          'Responsive PWA organized into menus (places, food, movies/shows, events and dates), with medication reminders scheduled by whoever adds them and instant push notifications between both phones.',
+          'Bilingual (PT/EN) PWA organized into menus (places, food, movies/shows, photos, love notes, messages, suggestions, events and dates), with medication reminders scheduled by whoever adds them, instant push notifications between both phones, and a gamified "mirror moments" scoreboard for "thinking of you" pings sent at mirrored times.',
         note: 'Private repository',
       },
       'projetos-java-faculdade': {
         name: 'Java Coursework — University Exercises',
         problem:
-          'Practicing object-oriented programming, inheritance and data structures (lists, stacks, trees) for university Java courses, through standalone practice exercises.',
+          'Practicing object-oriented programming, inheritance, recursion and data structures (lists, stacks, trees) for university Java courses, through standalone practice exercises.',
         solution:
-          'Collection of Java exercises and mini-projects (NetBeans) — geometric shape classes, inheritance, stacks and binary trees, TreeSet/TreeMap collections, and small record-keeping exercises (employee, voter, student, savings account).',
+          'Collection of Java exercises and mini-projects (NetBeans) — geometric shape classes, inheritance, stacks, binary and BST trees, recursion, TreeSet/TreeMap collections, small record-keeping exercises (employee, voter, student, savings account), and a full contact-book app with MVC/DAO layers, database persistence and PDF report generation.',
         note: 'College coursework',
       },
     },

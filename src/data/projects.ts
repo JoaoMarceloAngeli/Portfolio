@@ -10,7 +10,7 @@ export const projects: ProjectMeta[] = [
   {
     id: 'app-casal',
     index: '02',
-    stack: ['React', 'Vite', 'PWA', 'Supabase', 'Web Push (VAPID)'],
+    stack: ['React', 'TypeScript', 'Vite', 'PWA', 'Supabase', 'Web Push (VAPID)'],
     noteKind: 'private',
   },
   {
