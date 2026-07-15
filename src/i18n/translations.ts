@@ -107,13 +107,6 @@ const pt: Translations = {
     viewCode: 'Ver código',
     demo: 'Demo',
     items: {
-      'controle-de-despesas': {
-        name: 'Sistema de Gestão Financeira — Leilão de Gado',
-        problem:
-          'Produtores e leiloeiros fechavam a conta do leilão manualmente, em planilhas soltas — sem histórico confiável de receitas e despesas nem relatório pronto pra apresentar.',
-        solution:
-          'Aplicação web para lançar receitas e despesas do leilão em tempo real e gerar relatórios prontos, exportáveis em PDF e Excel, sem depender de planilha externa.',
-      },
       cardapio: {
         name: 'Catálogo Digital do Leilão',
         problem:
@@ -224,13 +217,6 @@ const en: Translations = {
     viewCode: 'View code',
     demo: 'Demo',
     items: {
-      'controle-de-despesas': {
-        name: 'Financial Management System — Cattle Auction',
-        problem:
-          "Producers and auctioneers closed the auction's books by hand in loose spreadsheets — no reliable history of income and expenses, and no report ready to present.",
-        solution:
-          "Web app for logging the auction's income and expenses in real time and generating ready-made reports, exportable to PDF and Excel, with no external spreadsheet needed.",
-      },
       cardapio: {
         name: 'Digital Auction Catalog',
         problem:
