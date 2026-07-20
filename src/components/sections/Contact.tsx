@@ -1,6 +1,6 @@
 import { ArrowUpRight, Mail } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
-import { GithubIcon, LinkedinIcon } from '@/components/ui/icons'
+import { GithubIcon, InstagramIcon, LinkedinIcon, WhatsappIcon } from '@/components/ui/icons'
 import { useLanguage } from '@/i18n/useLanguage'
 
 export function Contact() {
@@ -28,6 +28,20 @@ export function Contact() {
       href: 'https://github.com/JoaoMarceloAngeli',
       icon: GithubIcon,
     },
+    {
+      id: 'whatsapp',
+      label: t.contact.labels.whatsapp,
+      value: '+55 62 99318-1151',
+      href: 'https://wa.me/5562993181151',
+      icon: WhatsappIcon,
+    },
+    {
+      id: 'instagram',
+      label: t.contact.labels.instagram,
+      value: '@joao_marcel_o',
+      href: 'https://www.instagram.com/joao_marcel_o',
+      icon: InstagramIcon,
+    },
   ]
 
   return (
@@ -36,7 +50,7 @@ export function Contact() {
         {t.contact.description}
       </p>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {channels.map(({ id, label, value, href, icon: Icon }) => (
           <a
             key={id}

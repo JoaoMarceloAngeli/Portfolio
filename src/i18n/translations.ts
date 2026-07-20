@@ -52,7 +52,7 @@ interface Translations {
   contact: {
     title: string
     description: string
-    labels: { email: string; linkedin: string; github: string }
+    labels: { email: string; linkedin: string; github: string; whatsapp: string; instagram: string }
   }
   footer: {
     backToTop: string
@@ -162,7 +162,13 @@ const pt: Translations = {
     title: 'Contato',
     description:
       'Aberto a oportunidades e conversas sobre desenvolvimento full stack ou sistemas embarcados. O canal mais rápido é o email.',
-    labels: { email: 'Email', linkedin: 'LinkedIn', github: 'GitHub' },
+    labels: {
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+      whatsapp: 'WhatsApp',
+      instagram: 'Instagram',
+    },
   },
   footer: {
     backToTop: 'voltar ao topo ↑',
@@ -272,7 +278,13 @@ const en: Translations = {
     title: 'Contact',
     description:
       'Open to opportunities and conversations about full-stack development or embedded systems. Email is the fastest channel.',
-    labels: { email: 'Email', linkedin: 'LinkedIn', github: 'GitHub' },
+    labels: {
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+      whatsapp: 'WhatsApp',
+      instagram: 'Instagram',
+    },
   },
   footer: {
     backToTop: 'back to top ↑',
