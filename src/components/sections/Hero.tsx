@@ -45,7 +45,11 @@ export function Hero() {
             </p>
 
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink-muted sm:text-base lg:mx-0">
-              {t.hero.description}
+              {t.hero.descriptionBefore}
+              <a href="#skills" className="text-accent underline-offset-2 hover:underline">
+                {t.hero.descriptionTechWord}
+              </a>
+              {t.hero.descriptionAfter}
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3 lg:justify-start">

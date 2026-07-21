@@ -48,7 +48,7 @@ export function About() {
           </div>
         </div>
 
-        <div>
+        <div id="skills" className="scroll-mt-24">
           <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted">
             {t.skills.title}
           </p>

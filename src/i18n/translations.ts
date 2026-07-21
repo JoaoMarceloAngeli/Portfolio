@@ -16,7 +16,9 @@ interface Translations {
   hero: {
     status: string
     tagline: string
-    description: string
+    descriptionBefore: string
+    descriptionTechWord: string
+    descriptionAfter: string
     ctaProjects: string
     ctaContact: string
     photoPlaceholder: string
@@ -77,10 +79,12 @@ const pt: Translations = {
     languageToggle: 'Switch to English',
   },
   hero: {
-    status: 'Estagiário Full Stack — Zap Systen',
+    status: 'Desenvolvedor Full Stack',
     tagline: 'Desenvolvedor Full Stack · Engenharia da Computação',
-    description:
-      'Escrevo o front-end e o back-end que fecham a conta de um leilão de gado, e no laboratório da faculdade calibro o sensor que lê pressão e refração de luz. Meu lugar é na fronteira entre o código que roda no navegador e o que roda perto do hardware.',
+    descriptionBefore:
+      'Atuando como desenvolvedor Full Stack na empresa Zap Systen, participando de todo o ciclo do produto — do levantamento à entrega. Estudante de Engenharia da Computação na PUC-GO, hoje transito entre diversas ',
+    descriptionTechWord: 'tecnologias',
+    descriptionAfter: ', procurando sempre entregar o melhor resultado e atender as necessidades dos usuários.',
     ctaProjects: 'Ver projetos',
     ctaContact: 'Contato',
     photoPlaceholder: 'Foto em breve',
@@ -124,17 +128,17 @@ const pt: Translations = {
       'app-casal': {
         name: 'App para Casais',
         problem:
-          'A rotina corrida faz casais perderem o registro de lugares, filmes, fotos e datas importantes — e faltava um jeito rápido de lembrar o remédio na hora certa ou avisar "estou pensando em você" sem precisar abrir o WhatsApp.',
+          'Casais não tinham um lugar único para guardar memórias importantes, nem um jeito rápido de lembrar remédios, guardar informações importantes para um casal de maneira organizada e prática, ou mandar uma "notificação de carinho" sem abrir o WhatsApp.',
         solution:
-          'PWA bilíngue (PT/EN) organizado em menus (lugares, comidas, filmes/séries, fotos, cartinhas, recados, sugestões, eventos e datas), com lembretes de remédio agendados por quem cadastra, notificações push instantâneas entre os dois celulares e um placar gamificado de "momentos espelhados" para os pings de "pensando em você" enviados em horários espelhados.',
+          'PWA bilíngue (PT/EN) para casais, com lembretes de remédio, notificações push instantâneas entre os dois celulares e um placar gamificado de "momentos espelhados" para os pings de "notificação de carinho" enviados em horários, como uma forma de gamificar e melhorar a experiência do usuário, além de guardar informações com o fim de organizar a vida do casal.',
         note: 'Repositório privado',
       },
       'projetos-java-faculdade': {
         name: 'Exercícios de Java — Faculdade',
         problem:
-          'Praticar programação orientada a objetos, herança, recursividade e estruturas de dados (listas, pilhas, árvores) nas disciplinas de Java da faculdade, com exercícios avulsos de fixação.',
+          'Praticar programação orientada a objetos, herança, recursividade e estruturas de dados (listas, pilhas, árvores) nas disciplinas de Java da faculdade.',
         solution:
-          'Coleção de exercícios e miniprojetos em Java (NetBeans) — classes de formas geométricas, herança, pilhas, árvores binárias e BST, recursividade, coleções TreeSet/TreeMap, sistemas de cadastro (funcionário, eleitor, aluno, conta poupança) e uma agenda de contatos completa com camadas MVC/DAO, persistência em banco de dados e geração de relatórios em PDF.',
+          'Coleção de exercícios e miniprojetos em Java (NetBeans) cobrindo POO, herança, recursividade e estruturas de dados (pilhas, árvores, TreeSet/TreeMap), além de sistemas de cadastro e uma agenda de contatos completa com camadas MVC/DAO, persistência em banco de dados e geração de relatórios em PDF.',
         note: 'Projeto de faculdade',
       },
     },
@@ -169,7 +173,7 @@ const pt: Translations = {
   contact: {
     title: 'Contato',
     description:
-      'Aberto a oportunidades e conversas sobre desenvolvimento full stack ou sistemas embarcados. O canal mais rápido é o email.',
+      'Aberto a oportunidades e conversas sobre desenvolvimento full stack ou sistemas embarcados. O canal mais rápido é o e-mail.',
     labels: {
       email: 'Email',
       linkedin: 'LinkedIn',
@@ -197,10 +201,12 @@ const en: Translations = {
     languageToggle: 'Mudar para português',
   },
   hero: {
-    status: 'Full-Stack Intern — Zap Systen',
+    status: 'Full-Stack Developer',
     tagline: 'Full Stack Developer · Computer Engineering',
-    description:
-      "I write the front-end and back-end that close the books on a cattle auction, and in the university lab I calibrate the sensor that reads pressure and light refraction. My place is on the border between code that runs in the browser and code that runs close to hardware.",
+    descriptionBefore:
+      "Working as a Full-Stack Developer at Zap Systen, taking part in the full product cycle — from discovery to delivery. A Computer Engineering student at PUC-GO, I move between a range of ",
+    descriptionTechWord: 'technologies',
+    descriptionAfter: ", always aiming to deliver the best result and meet users' needs.",
     ctaProjects: 'View projects',
     ctaContact: 'Contact',
     photoPlaceholder: 'Photo coming soon',
@@ -244,17 +250,17 @@ const en: Translations = {
       'app-casal': {
         name: 'Couples App',
         problem:
-          'A busy routine makes couples lose track of places, movies, photos and important dates — and there was no quick way to get a medication reminder on time or send a "thinking of you" ping without opening WhatsApp.',
+          'Couples had no single place to keep important memories, nor a quick way to get medication reminders, keep important information in an organized and practical way, or send a "care notification" without opening WhatsApp.',
         solution:
-          'Bilingual (PT/EN) PWA organized into menus (places, food, movies/shows, photos, love notes, messages, suggestions, events and dates), with medication reminders scheduled by whoever adds them, instant push notifications between both phones, and a gamified "mirror moments" scoreboard for "thinking of you" pings sent at mirrored times.',
+          'Bilingual (PT/EN) PWA for couples, with medication reminders, instant push notifications between both phones, and a gamified "mirror moments" scoreboard for "care notification" pings sent at scheduled times — a way to gamify and improve the user experience, while also storing information to help organize the couple\'s life.',
         note: 'Private repository',
       },
       'projetos-java-faculdade': {
         name: 'Java Coursework — University Exercises',
         problem:
-          'Practicing object-oriented programming, inheritance, recursion and data structures (lists, stacks, trees) for university Java courses, through standalone practice exercises.',
+          'Practicing object-oriented programming, inheritance, recursion and data structures (lists, stacks, trees) for university Java courses.',
         solution:
-          'Collection of Java exercises and mini-projects (NetBeans) — geometric shape classes, inheritance, stacks, binary and BST trees, recursion, TreeSet/TreeMap collections, small record-keeping exercises (employee, voter, student, savings account), and a full contact-book app with MVC/DAO layers, database persistence and PDF report generation.',
+          'Collection of Java exercises and mini-projects (NetBeans) covering OOP, inheritance, recursion and data structures (stacks, trees, TreeSet/TreeMap), plus record-keeping systems and a full contact-book app with MVC/DAO layers, database persistence and PDF report generation.',
         note: 'College coursework',
       },
     },
