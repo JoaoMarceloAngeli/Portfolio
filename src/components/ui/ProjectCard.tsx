@@ -11,68 +11,72 @@ export function ProjectCard({ project }: { project: ProjectMeta }) {
   const NoteIcon = project.noteKind ? NOTE_ICONS[project.noteKind] : null
 
   return (
-    <article className="corner-brackets group flex flex-col gap-5 border border-border bg-surface p-6 transition-colors hover:bg-surface-hover sm:p-8">
-      <div className="flex items-start justify-between gap-4">
-        <span className="font-mono text-sm text-accent">{project.index}</span>
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-accent/40">
+      <div className="relative flex h-28 items-center justify-center overflow-hidden border-b border-border bg-linear-to-br from-accent-soft to-transparent">
+        <span className="font-mono text-4xl font-semibold text-ink/10">{project.index}</span>
         {content.note && NoteIcon && (
-          <span className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-ink-muted">
-            <NoteIcon size={12} />
+          <span className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink-muted">
+            <NoteIcon size={11} />
             {content.note}
           </span>
         )}
       </div>
 
-      <h3 className="font-mono text-xl font-medium text-ink sm:text-2xl">{content.name}</h3>
+      <div className="flex flex-1 flex-col p-6">
+        <ul className="mb-4 flex flex-wrap gap-2">
+          {project.stack.map((tech) => (
+            <li
+              key={tech}
+              className="rounded-lg border border-border px-2.5 py-1 text-[11px] text-ink-muted"
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
 
-      <div className="space-y-3 text-sm leading-relaxed text-ink-muted sm:text-base">
-        <p>
-          <span className="font-mono text-xs uppercase tracking-wider text-circuit">
-            {t.projects.problemLabel} —{' '}
-          </span>
-          {content.problem}
-        </p>
-        <p>
-          <span className="font-mono text-xs uppercase tracking-wider text-circuit">
-            {t.projects.solutionLabel} —{' '}
-          </span>
-          {content.solution}
-        </p>
-      </div>
+        <h3 className="mb-2 text-base font-semibold leading-snug text-ink transition-colors group-hover:text-accent">
+          {content.name}
+        </h3>
 
-      <ul className="flex flex-wrap gap-2">
-        {project.stack.map((tech) => (
-          <li
-            key={tech}
-            className="rounded border border-border px-2.5 py-1 font-mono text-[11px] text-ink-muted"
-          >
-            {tech}
-          </li>
-        ))}
-      </ul>
+        <div className="flex-1 space-y-2 text-sm leading-relaxed text-ink-muted">
+          <p>
+            <span className="font-mono text-xs uppercase tracking-wider text-circuit">
+              {t.projects.problemLabel} —{' '}
+            </span>
+            {content.problem}
+          </p>
+          <p>
+            <span className="font-mono text-xs uppercase tracking-wider text-circuit">
+              {t.projects.solutionLabel} —{' '}
+            </span>
+            {content.solution}
+          </p>
+        </div>
 
-      <div className="mt-auto flex items-center gap-5 pt-2 font-mono text-sm">
-        {project.repoUrl && (
-          <a
-            href={project.repoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-ink transition-colors hover:text-accent"
-          >
-            <GithubIcon size={15} />
-            {t.projects.viewCode}
-          </a>
-        )}
-        {project.demoUrl && (
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-ink transition-colors hover:text-accent"
-          >
-            <ArrowUpRight size={15} />
-            {t.projects.demo}
-          </a>
-        )}
+        <div className="mt-6 flex items-center gap-4 border-t border-border pt-4 text-xs">
+          {project.repoUrl && (
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-ink-muted transition-colors hover:text-ink"
+            >
+              <GithubIcon size={14} />
+              {t.projects.viewCode}
+            </a>
+          )}
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="ml-auto inline-flex items-center gap-1.5 text-ink-muted transition-colors hover:text-accent"
+            >
+              <ArrowUpRight size={13} />
+              {t.projects.demo}
+            </a>
+          )}
+        </div>
       </div>
     </article>
   )

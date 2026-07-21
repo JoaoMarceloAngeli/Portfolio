@@ -2,9 +2,9 @@ import type { Language } from '@/types'
 
 interface Translations {
   nav: {
+    home: string
     about: string
     projects: string
-    skills: string
     experience: string
     contact: string
     themeToLight: string
@@ -19,6 +19,10 @@ interface Translations {
     description: string
     ctaProjects: string
     ctaContact: string
+    photoPlaceholder: string
+    statProjects: string
+    statTech: string
+    statExperience: string
   }
   about: {
     title: string
@@ -30,7 +34,6 @@ interface Translations {
     paragraph2And: string
     lightRefraction: string
     paragraph2After: string
-    specSheet: string
     specs: { label: string; value: string }[]
   }
   projects: {
@@ -47,6 +50,7 @@ interface Translations {
   }
   experience: {
     title: string
+    current: string
     items: Record<string, { role: string; period: string; summary: string }>
   }
   contact: {
@@ -61,9 +65,9 @@ interface Translations {
 
 const pt: Translations = {
   nav: {
+    home: 'Início',
     about: 'Sobre',
     projects: 'Projetos',
-    skills: 'Skills',
     experience: 'Experiência',
     contact: 'Contato',
     themeToLight: 'Ativar modo claro',
@@ -79,6 +83,10 @@ const pt: Translations = {
       'Escrevo o front-end e o back-end que fecham a conta de um leilão de gado, e no laboratório da faculdade calibro o sensor que lê pressão e refração de luz. Meu lugar é na fronteira entre o código que roda no navegador e o que roda perto do hardware.',
     ctaProjects: 'Ver projetos',
     ctaContact: 'Contato',
+    photoPlaceholder: 'Foto em breve',
+    statProjects: 'Projetos',
+    statTech: 'Tecnologias',
+    statExperience: 'Experiências',
   },
   about: {
     title: 'Sobre',
@@ -92,7 +100,6 @@ const pt: Translations = {
     paragraph2And: ' e ',
     lightRefraction: 'refração de luz',
     paragraph2After: ' — hardware e software na mesma placa.',
-    specSheet: 'Ficha técnica',
     specs: [
       { label: 'Formação', value: 'Eng. da Computação — PUC-GO, 8º período' },
       { label: 'Foco atual', value: 'Full Stack — Zap Systen' },
@@ -143,6 +150,7 @@ const pt: Translations = {
   },
   experience: {
     title: 'Experiência',
+    current: 'Atual',
     items: {
       'zap-systen': {
         role: 'Estagiário Full Stack',
@@ -177,9 +185,9 @@ const pt: Translations = {
 
 const en: Translations = {
   nav: {
+    home: 'Home',
     about: 'About',
     projects: 'Projects',
-    skills: 'Skills',
     experience: 'Experience',
     contact: 'Contact',
     themeToLight: 'Switch to light mode',
@@ -195,6 +203,10 @@ const en: Translations = {
       "I write the front-end and back-end that close the books on a cattle auction, and in the university lab I calibrate the sensor that reads pressure and light refraction. My place is on the border between code that runs in the browser and code that runs close to hardware.",
     ctaProjects: 'View projects',
     ctaContact: 'Contact',
+    photoPlaceholder: 'Photo coming soon',
+    statProjects: 'Projects',
+    statTech: 'Technologies',
+    statExperience: 'Experiences',
   },
   about: {
     title: 'About',
@@ -208,7 +220,6 @@ const en: Translations = {
     paragraph2And: ' and ',
     lightRefraction: 'light refraction',
     paragraph2After: ' — hardware and software on the same board.',
-    specSheet: 'Spec sheet',
     specs: [
       { label: 'Education', value: 'Computer Engineering — PUC-GO, 8th semester' },
       { label: 'Current focus', value: 'Full Stack — Zap Systen' },
@@ -259,6 +270,7 @@ const en: Translations = {
   },
   experience: {
     title: 'Experience',
+    current: 'Current',
     items: {
       'zap-systen': {
         role: 'Full-Stack Intern',

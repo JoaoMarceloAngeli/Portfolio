@@ -20,7 +20,6 @@ export function Nav() {
   const links = [
     { href: '#sobre', label: t.nav.about },
     { href: '#projetos', label: t.nav.projects },
-    { href: '#skills', label: t.nav.skills },
     { href: '#experiencia', label: t.nav.experience },
     { href: '#contato', label: t.nav.contact },
   ]
@@ -31,17 +30,18 @@ export function Nav() {
         scrolled || menuOpen ? 'border-b border-border bg-bg/85 backdrop-blur' : 'border-b border-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-mono text-sm font-medium text-ink">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#top" className="text-lg font-bold tracking-tight text-ink">
           João_Marcelo<span className="text-accent">.</span>Dev
         </a>
 
-        <ul className="hidden items-center gap-7 font-mono text-xs uppercase tracking-wider text-ink-muted sm:flex">
+        <ul className="hidden items-center gap-8 text-sm font-medium text-ink-muted sm:flex">
           {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className="transition-colors hover:text-accent">
+            <li key={link.href} className="group relative">
+              <a href={link.href} className="block py-2 transition-colors hover:text-ink">
                 {link.label}
               </a>
+              <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 group-hover:w-full" />
             </li>
           ))}
         </ul>
@@ -53,7 +53,7 @@ export function Nav() {
             type="button"
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? t.nav.themeToLight : t.nav.themeToDark}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-ink-muted transition-colors hover:border-accent hover:text-accent"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-border text-ink-muted transition-colors hover:border-accent hover:text-accent"
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
@@ -62,7 +62,7 @@ export function Nav() {
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? t.nav.closeMenu : t.nav.openMenu}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-ink-muted transition-colors hover:border-accent hover:text-accent sm:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-border text-ink-muted transition-colors hover:border-accent hover:text-accent sm:hidden"
           >
             {menuOpen ? <X size={16} /> : <Menu size={16} />}
           </button>
@@ -70,7 +70,7 @@ export function Nav() {
       </nav>
 
       {menuOpen && (
-        <ul className="flex flex-col gap-1 border-t border-border px-6 py-4 font-mono text-sm uppercase tracking-wider text-ink-muted sm:hidden">
+        <ul className="flex flex-col gap-1 border-t border-border px-6 py-4 text-sm font-medium text-ink-muted sm:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <a

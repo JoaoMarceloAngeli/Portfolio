@@ -1,35 +1,76 @@
+import { Briefcase, FlaskConical, GraduationCap, MapPin } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
+import { skillCategories } from '@/data/skills'
 import { useLanguage } from '@/i18n/useLanguage'
+
+const SPEC_ICONS = [GraduationCap, Briefcase, FlaskConical, MapPin]
 
 export function About() {
   const { t } = useLanguage()
 
   return (
-    <Section id="sobre" index="02" title={t.about.title}>
-      <div className="grid gap-10 sm:grid-cols-[1.3fr_1fr] sm:gap-14">
-        <div className="space-y-4 text-base leading-relaxed text-ink-muted sm:text-lg">
-          <p>{t.about.paragraph1}</p>
-          <p>
-            {t.about.paragraph2Before}
-            <span className="text-ink">{t.about.zapSysten}</span>
-            {t.about.paragraph2Mid}
-            <span className="text-ink">{t.about.pressureAnalysis}</span>
-            {t.about.paragraph2And}
-            <span className="text-ink">{t.about.lightRefraction}</span>
-            {t.about.paragraph2After}
-          </p>
+    <Section id="sobre" index="01" title={t.about.title}>
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <div className="space-y-4 text-base leading-relaxed text-ink-muted">
+            <p>{t.about.paragraph1}</p>
+            <p>
+              {t.about.paragraph2Before}
+              <span className="text-ink">{t.about.zapSysten}</span>
+              {t.about.paragraph2Mid}
+              <span className="text-ink">{t.about.pressureAnalysis}</span>
+              {t.about.paragraph2And}
+              <span className="text-ink">{t.about.lightRefraction}</span>
+              {t.about.paragraph2After}
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {t.about.specs.map((spec, i) => {
+              const Icon = SPEC_ICONS[i % SPEC_ICONS.length]
+              return (
+                <div
+                  key={spec.label}
+                  className="rounded-xl border border-border bg-surface p-4 transition-colors hover:border-accent/30 hover:bg-accent-soft"
+                >
+                  <div className="flex items-start gap-3">
+                    <Icon size={18} className="mt-0.5 shrink-0 text-accent" />
+                    <div>
+                      <p className="mb-1 text-[10px] uppercase tracking-widest text-ink-muted">
+                        {spec.label}
+                      </p>
+                      <p className="text-sm font-medium text-ink">{spec.value}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
 
-        <div className="corner-brackets border border-border bg-surface p-6 font-mono text-xs">
-          <p className="mb-4 uppercase tracking-[0.2em] text-ink-muted">{t.about.specSheet}</p>
-          <dl className="space-y-3">
-            {t.about.specs.map((spec) => (
-              <div key={spec.label}>
-                <dt className="uppercase tracking-wider text-circuit">{spec.label}</dt>
-                <dd className="mt-0.5 text-ink-muted">{spec.value}</dd>
+        <div>
+          <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted">
+            {t.skills.title}
+          </p>
+          <div className="space-y-6">
+            {skillCategories.map((category) => (
+              <div key={category.id}>
+                <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-circuit">
+                  {t.skills.categoryLabels[category.id]}
+                </h3>
+                <ul className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <li
+                      key={skill}
+                      className="rounded-xl border border-border bg-surface px-3.5 py-2 text-sm text-ink-muted transition-colors hover:border-accent/30 hover:bg-accent-soft hover:text-ink"
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </Section>
