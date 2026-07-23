@@ -1,6 +1,7 @@
 import { Briefcase, FlaskConical, GraduationCap, MapPin } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { skillCategories } from '@/data/skills'
+import { skillIcons } from '@/data/skillIcons'
 import { useLanguage } from '@/i18n/useLanguage'
 
 const SPEC_ICONS = [GraduationCap, Briefcase, FlaskConical, MapPin]
@@ -58,15 +59,19 @@ export function About() {
                 <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-circuit">
                   {t.skills.categoryLabels[category.id]}
                 </h3>
-                <ul className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <li
-                      key={skill}
-                      className="rounded-xl border border-border bg-surface px-3.5 py-2 text-sm text-ink-muted transition-colors hover:border-accent/30 hover:bg-accent-soft hover:text-ink"
-                    >
-                      {skill}
-                    </li>
-                  ))}
+                <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                  {category.skills.map((skill) => {
+                    const Icon = skillIcons[skill]
+                    return (
+                      <li
+                        key={skill}
+                        className="flex items-center gap-2.5 rounded-xl border border-border bg-surface px-3.5 py-2.5 text-sm text-ink-muted transition-colors hover:border-accent/30 hover:bg-accent-soft hover:text-ink"
+                      >
+                        {Icon && <Icon size={16} className="shrink-0 text-accent" />}
+                        <span className="truncate">{skill}</span>
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             ))}
