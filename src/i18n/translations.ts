@@ -28,23 +28,16 @@ interface Translations {
   }
   about: {
     title: string
-    paragraph1: string
-    paragraph2Before: string
-    zapSysten: string
-    paragraph2Mid: string
-    pressureAnalysis: string
-    paragraph2And: string
-    lightRefraction: string
-    paragraph2After: string
+    paragraph1Before: string
+    name: string
+    paragraph1After: string
     specs: { label: string; value: string }[]
   }
   projects: {
     title: string
-    problemLabel: string
-    solutionLabel: string
     viewCode: string
     demo: string
-    items: Record<string, { name: string; problem: string; solution: string; note?: string }>
+    items: Record<string, { name: string; description: string; note?: string }>
   }
   skills: {
     title: string
@@ -94,16 +87,10 @@ const pt: Translations = {
   },
   about: {
     title: 'Sobre',
-    paragraph1:
-      'Estou no 8º período de Engenharia da Computação na PUC-GO e transito com naturalidade entre dois mundos que normalmente não se falam: o do front-end/back-end que resolve um problema de negócio real, e o dos circuitos que leem o mundo físico.',
-    paragraph2Before: 'Hoje isso aparece de dois jeitos concretos: no estágio full stack na ',
-    zapSysten: 'Zap Systen',
-    paragraph2Mid:
-      ', onde mexo em código de produção dos dois lados da pilha; e na iniciação científica da faculdade, onde ajudo a construir um sistema que identifica volume combinando ',
-    pressureAnalysis: 'análise de pressão',
-    paragraph2And: ' e ',
-    lightRefraction: 'refração de luz',
-    paragraph2After: ' — hardware e software na mesma placa.',
+    paragraph1Before: 'Olá, eu sou ',
+    name: 'João Marcelo Angeli Barbosa',
+    paragraph1After:
+      ', sou desenvolvedor full-stack, estudante de Engenharia da Computação na PUC-GO, atuando como estagiário na Zap Systen e na iniciação científica, onde desenvolvo um sistema que identifica volume combinando análise de pressão e refração de luz — hardware e software na mesma placa.',
     specs: [
       { label: 'Formação', value: 'Eng. da Computação — PUC-GO, 8º período' },
       { label: 'Foco atual', value: 'Full Stack — Zap Systen' },
@@ -113,32 +100,24 @@ const pt: Translations = {
   },
   projects: {
     title: 'Projetos',
-    problemLabel: 'Problema',
-    solutionLabel: 'Solução',
     viewCode: 'Ver código',
     demo: 'Demo',
     items: {
       cardapio: {
         name: 'Catálogo Digital do Leilão',
-        problem:
-          'O leilão precisava expor os lotes do evento de forma acessível pelo celular, sem depender de PDF estático ou papel impresso na hora do lance.',
-        solution:
-          'Front-end responsivo que funciona como catálogo digital do leilão, com carregamento rápido e leiaute pensado para telas pequenas durante o evento.',
+        description:
+          'Catálogo digital responsivo para expor os lotes de um leilão de forma acessível pelo celular, substituindo o PDF estático e o papel impresso na hora do lance — com carregamento rápido e leiaute pensado para telas pequenas durante o evento.',
       },
       'app-casal': {
         name: 'App para Casais',
-        problem:
-          'Casais não tinham um lugar único para guardar memórias importantes, nem um jeito rápido de lembrar remédios, guardar informações importantes para um casal de maneira organizada e prática, ou mandar uma "notificação de carinho" sem abrir o WhatsApp.',
-        solution:
-          'PWA bilíngue (PT/EN) para casais, com lembretes de remédio, notificações push instantâneas entre os dois celulares e um placar gamificado de "momentos espelhados" para os pings de "notificação de carinho" enviados em horários, como uma forma de gamificar e melhorar a experiência do usuário, além de guardar informações com o fim de organizar a vida do casal.',
+        description:
+          'PWA bilíngue (PT/EN) para casais que não tinham um lugar único para guardar memórias importantes, nem um jeito rápido de lembrar remédios ou mandar uma "notificação de carinho" sem abrir o WhatsApp. Traz lembretes de remédio, notificações push instantâneas entre os dois celulares e um placar gamificado de "momentos espelhados" para organizar e tornar mais afetiva a rotina do casal.',
         note: 'Repositório privado',
       },
       'projetos-java-faculdade': {
         name: 'Exercícios de Java — Faculdade',
-        problem:
-          'Praticar programação orientada a objetos, herança, recursividade e estruturas de dados (listas, pilhas, árvores) nas disciplinas de Java da faculdade.',
-        solution:
-          'Coleção de exercícios e miniprojetos em Java (NetBeans) cobrindo POO, herança, recursividade e estruturas de dados (pilhas, árvores, TreeSet/TreeMap), além de sistemas de cadastro e uma agenda de contatos completa com camadas MVC/DAO, persistência em banco de dados e geração de relatórios em PDF.',
+        description:
+          'Coleção de exercícios e miniprojetos em Java (NetBeans) feita para praticar programação orientada a objetos, herança, recursividade e estruturas de dados (listas, pilhas, árvores, TreeSet/TreeMap) nas disciplinas da faculdade — incluindo sistemas de cadastro e uma agenda de contatos completa com camadas MVC/DAO, persistência em banco de dados e geração de relatórios em PDF.',
         note: 'Projeto de faculdade',
       },
     },
@@ -173,7 +152,7 @@ const pt: Translations = {
   contact: {
     title: 'Contato',
     description:
-      'Aberto a oportunidades e conversas sobre desenvolvimento full stack ou sistemas embarcados. O canal mais rápido é o e-mail.',
+      'Estou aberto a novas oportunidades, projetos freelance e colaborações. Estou disponível através de qualquer canal abaixo.',
     labels: {
       email: 'Email',
       linkedin: 'LinkedIn',
@@ -216,16 +195,10 @@ const en: Translations = {
   },
   about: {
     title: 'About',
-    paragraph1:
-      "I'm in my 8th semester of Computer Engineering at PUC-GO, and I move naturally between two worlds that don't usually talk to each other: the front-end/back-end that solves a real business problem, and the circuits that read the physical world.",
-    paragraph2Before: 'Today that shows up in two concrete ways: in my full-stack internship at ',
-    zapSysten: 'Zap Systen',
-    paragraph2Mid:
-      ", where I touch production code on both ends of the stack; and in my university's undergraduate research project, where I help build a system that identifies volume by combining ",
-    pressureAnalysis: 'pressure analysis',
-    paragraph2And: ' and ',
-    lightRefraction: 'light refraction',
-    paragraph2After: ' — hardware and software on the same board.',
+    paragraph1Before: "Hi, I'm ",
+    name: 'João Marcelo Angeli Barbosa',
+    paragraph1After:
+      ", a full-stack developer and Computer Engineering student at PUC-GO, working as an intern at Zap Systen and on an undergraduate research project, where I'm developing a system that identifies volume by combining pressure analysis and light refraction — hardware and software on the same board.",
     specs: [
       { label: 'Education', value: 'Computer Engineering — PUC-GO, 8th semester' },
       { label: 'Current focus', value: 'Full Stack — Zap Systen' },
@@ -235,32 +208,24 @@ const en: Translations = {
   },
   projects: {
     title: 'Projects',
-    problemLabel: 'Problem',
-    solutionLabel: 'Solution',
     viewCode: 'View code',
     demo: 'Demo',
     items: {
       cardapio: {
         name: 'Digital Auction Catalog',
-        problem:
-          "The auction needed to display the event's lots in a mobile-friendly way, without relying on a static PDF or printed paper during bidding.",
-        solution:
-          "Responsive front-end that works as the auction's digital catalog, with fast loading and a layout designed for small screens during the event.",
+        description:
+          "Responsive digital catalog that displays the auction's lots in a mobile-friendly way, replacing the static PDF and printed paper used during bidding — with fast loading and a layout designed for small screens during the event.",
       },
       'app-casal': {
         name: 'Couples App',
-        problem:
-          'Couples had no single place to keep important memories, nor a quick way to get medication reminders, keep important information in an organized and practical way, or send a "care notification" without opening WhatsApp.',
-        solution:
-          'Bilingual (PT/EN) PWA for couples, with medication reminders, instant push notifications between both phones, and a gamified "mirror moments" scoreboard for "care notification" pings sent at scheduled times — a way to gamify and improve the user experience, while also storing information to help organize the couple\'s life.',
+        description:
+          'Bilingual (PT/EN) PWA for couples who had no single place to keep important memories, no quick way to get medication reminders, or send a "care notification" without opening WhatsApp. It brings medication reminders, instant push notifications between both phones, and a gamified "mirror moments" scoreboard to organize and add a more affectionate touch to the couple\'s routine.',
         note: 'Private repository',
       },
       'projetos-java-faculdade': {
         name: 'Java Coursework — University Exercises',
-        problem:
-          'Practicing object-oriented programming, inheritance, recursion and data structures (lists, stacks, trees) for university Java courses.',
-        solution:
-          'Collection of Java exercises and mini-projects (NetBeans) covering OOP, inheritance, recursion and data structures (stacks, trees, TreeSet/TreeMap), plus record-keeping systems and a full contact-book app with MVC/DAO layers, database persistence and PDF report generation.',
+        description:
+          'Collection of Java exercises and mini-projects (NetBeans) built to practice object-oriented programming, inheritance, recursion and data structures (lists, stacks, trees, TreeSet/TreeMap) for university courses — including record-keeping systems and a full contact-book app with MVC/DAO layers, database persistence and PDF report generation.',
         note: 'College coursework',
       },
     },
@@ -295,7 +260,7 @@ const en: Translations = {
   contact: {
     title: 'Contact',
     description:
-      'Open to opportunities and conversations about full-stack development or embedded systems. Email is the fastest channel.',
+      'Open to new opportunities, freelance projects, and collaborations. Available through any of the channels below.',
     labels: {
       email: 'Email',
       linkedin: 'LinkedIn',

@@ -14,15 +14,10 @@ export function About() {
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <div className="space-y-4 text-base leading-relaxed text-ink-muted">
-            <p>{t.about.paragraph1}</p>
             <p>
-              {t.about.paragraph2Before}
-              <span className="text-ink">{t.about.zapSysten}</span>
-              {t.about.paragraph2Mid}
-              <span className="text-ink">{t.about.pressureAnalysis}</span>
-              {t.about.paragraph2And}
-              <span className="text-ink">{t.about.lightRefraction}</span>
-              {t.about.paragraph2After}
+              {t.about.paragraph1Before}
+              <strong className="font-semibold text-ink">{t.about.name}</strong>
+              {t.about.paragraph1After}
             </p>
           </div>
 

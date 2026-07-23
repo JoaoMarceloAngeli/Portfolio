@@ -38,20 +38,7 @@ export function ProjectCard({ project }: { project: ProjectMeta }) {
           {content.name}
         </h3>
 
-        <div className="flex-1 space-y-2 text-sm leading-relaxed text-ink-muted">
-          <p>
-            <span className="font-mono text-xs uppercase tracking-wider text-circuit">
-              {t.projects.problemLabel} —{' '}
-            </span>
-            {content.problem}
-          </p>
-          <p>
-            <span className="font-mono text-xs uppercase tracking-wider text-circuit">
-              {t.projects.solutionLabel} —{' '}
-            </span>
-            {content.solution}
-          </p>
-        </div>
+        <p className="flex-1 text-sm leading-relaxed text-ink-muted">{content.description}</p>
 
         <div className="mt-6 flex items-center gap-4 border-t border-border pt-4 text-xs">
           {project.repoUrl && (
