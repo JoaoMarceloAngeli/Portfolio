@@ -31,7 +31,7 @@ interface Translations {
     paragraph1Before: string
     name: string
     paragraph1After: string
-    specs: { label: string; value: string }[]
+    specs: { label: string; value: string; detail: string }[]
   }
   projects: {
     title: string
@@ -83,7 +83,7 @@ const pt: Translations = {
     photoPlaceholder: 'Foto em breve',
     statProjects: 'Projetos',
     statTech: 'Tecnologias',
-    statExperience: 'Experiências',
+    statExperience: 'Anos de experiência',
   },
   about: {
     title: 'Sobre',
@@ -92,10 +92,22 @@ const pt: Translations = {
     paragraph1After:
       ', sou desenvolvedor full-stack, estudante de Engenharia da Computação na PUC-GO, atuando como estagiário na Zap Systen e na iniciação científica, onde desenvolvo um sistema que identifica volume combinando análise de pressão e refração de luz — hardware e software na mesma placa.',
     specs: [
-      { label: 'Formação', value: 'Eng. da Computação — PUC-GO, 8º período' },
-      { label: 'Foco atual', value: 'Full Stack — Zap Systen' },
-      { label: 'Laboratório', value: 'Iniciação científica — pressão e refração de luz' },
-      { label: 'Base', value: 'Goiânia, GO' },
+      { label: 'Formação', value: 'Eng. da Computação', detail: 'PUC-GO, 8º período' },
+      {
+        label: 'Experiência atual',
+        value: 'Estagiário de TI',
+        detail: 'Zap Systen · abril/2026 - atual',
+      },
+      {
+        label: 'Laboratório',
+        value: 'Iniciação científica',
+        detail: 'pressão e refração de luz',
+      },
+      {
+        label: 'Localização',
+        value: 'Goiânia, GO',
+        detail: 'Disponível para remoto, presencial ou híbrido',
+      },
     ],
   },
   projects: {
@@ -191,7 +203,7 @@ const en: Translations = {
     photoPlaceholder: 'Photo coming soon',
     statProjects: 'Projects',
     statTech: 'Technologies',
-    statExperience: 'Experiences',
+    statExperience: 'Years of experience',
   },
   about: {
     title: 'About',
@@ -200,10 +212,22 @@ const en: Translations = {
     paragraph1After:
       ", a full-stack developer and Computer Engineering student at PUC-GO, working as an intern at Zap Systen and on an undergraduate research project, where I'm developing a system that identifies volume by combining pressure analysis and light refraction — hardware and software on the same board.",
     specs: [
-      { label: 'Education', value: 'Computer Engineering — PUC-GO, 8th semester' },
-      { label: 'Current focus', value: 'Full Stack — Zap Systen' },
-      { label: 'Lab', value: 'Undergraduate research — pressure & light refraction' },
-      { label: 'Based in', value: 'Goiânia, Brazil' },
+      { label: 'Education', value: 'Computer Engineering', detail: 'PUC-GO, 8th semester' },
+      {
+        label: 'Current role',
+        value: 'IT Intern',
+        detail: 'Zap Systen · Apr/2026 - present',
+      },
+      {
+        label: 'Lab',
+        value: 'Undergraduate research',
+        detail: 'pressure & light refraction',
+      },
+      {
+        label: 'Location',
+        value: 'Goiânia, Brazil',
+        detail: 'Available for remote, on-site or hybrid work',
+      },
     ],
   },
   projects: {

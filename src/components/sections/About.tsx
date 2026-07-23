@@ -35,7 +35,8 @@ export function About() {
                       <p className="mb-1 text-[10px] uppercase tracking-widest text-ink-muted">
                         {spec.label}
                       </p>
-                      <p className="text-sm font-medium text-ink">{spec.value}</p>
+                      <p className="text-sm font-semibold text-ink">{spec.value}</p>
+                      <p className="text-xs text-ink-muted">{spec.detail}</p>
                     </div>
                   </div>
                 </div>

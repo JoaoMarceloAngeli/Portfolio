@@ -12,8 +12,8 @@ export function Hero() {
 
   const stats = [
     { value: String(projects.length), label: t.hero.statProjects },
-    { value: String(techCount), label: t.hero.statTech },
-    { value: String(experience.length), label: t.hero.statExperience },
+    { value: `${techCount}+`, label: t.hero.statTech },
+    { value: `${experience.length}+`, label: t.hero.statExperience },
   ]
 
   return (
